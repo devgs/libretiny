@@ -63,7 +63,7 @@ OSStatus bk_wlan_start_sta_adv_fix(network_InitTypeDef_adv_st *inNetworkInitPara
 
         /* Make copy with a guaranteed null terminator. */
         os_memcpy(key_buffer, g_sta_param_ptr->key, g_sta_param_ptr->key_len);
-        key_buffer[g_sta_param_ptr->key_len + 1] = '\0';
+        key_buffer[g_sta_param_ptr->key_len] = '\0';
 
         /*
          * let wpa_psk_cal thread to caculate psk.
@@ -106,7 +106,7 @@ OSStatus bk_wlan_start_sta_adv_fix(network_InitTypeDef_adv_st *inNetworkInitPara
 
         /* Make copy with a guaranteed null terminator. */
         os_memcpy(key_buffer, g_sta_param_ptr->key, g_sta_param_ptr->key_len);
-        key_buffer[g_sta_param_ptr->key_len + 1] = '\0';
+        key_buffer[g_sta_param_ptr->key_len] = '\0';
 
         /*
          * let wpa_psk_cal thread to caculate psk.
